@@ -54,7 +54,7 @@ const createEnquiry = async (req, res, next) => {
         mobile,
         experience,
         message,
-    encType:"Yes"});
+        encType:"Yes"});
        return res.status(200).json({
         error: false,
         message: "Enquiry Updated successfully",

@@ -31,7 +31,7 @@ const expressServer = async () => {
 
   
   //test Api
-  app.use("/welcome", async (req, res, next) => {
+  app.get("/", async (req, res, next) => {
     res.json({ message: "welcome" });
   });
 
