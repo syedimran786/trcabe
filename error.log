@@ -1,0 +1,44 @@
+error Time: Mon May 01 2023 18:23:56 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: email: Path `email` is required. User:undefined
+error Time: Mon May 01 2023 18:25:00 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: email: Path `email` is required. User:undefined
+error Time: Mon May 01 2023 18:25:42 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: email: Path `email` is required. User:undefined
+error Time: Mon May 01 2023 18:28:35 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: yearsOfExp: Path `yearsOfExp` is required. User:undefined
+error Time: Mon May 01 2023 18:28:54 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: yearsOfExp: Path `yearsOfExp` is required. User:undefined
+error Time: Tue May 02 2023 11:48:21 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:wdata is not defined User:undefined
+error Time: Tue May 02 2023 11:49:07 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:Cannot read properties of undefined (reading 'fullName') User:undefined
+error Time: Tue May 02 2023 11:50:17 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:Cannot read properties of undefined (reading 'fullName') User:undefined
+error Time: Tue May 02 2023 11:52:48 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:Cannot read properties of undefined (reading 'fullName') User:undefined
+error Time: Tue May 02 2023 11:53:57 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:Cannot set headers after they are sent to the client User:undefined
+error Time: Tue May 02 2023 13:02:06 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:free is not defined User:undefined
+error Time: Tue May 02 2023 13:19:54 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:addFeedback.create is not a function User:undefined
+error Time: Tue May 02 2023 13:33:38 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:addFeedback.create is not a function User:undefined
+error Time: Tue May 02 2023 15:24:11 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: overallStatus: `Rejected` is not a valid enum value for path `overallStatus`. User:undefined
+error Time: Tue May 02 2023 15:25:25 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: overallStatus: `DID NOT ATTENDED` is not a valid enum value for path `overallStatus`. User:undefined
+error Time: Wed May 03 2023 13:56:23 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:Candidate.insert is not a function User:undefined
+error Time: Wed May 03 2023 13:58:32 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:Candidate.insertOne is not a function User:undefined
+error Time: Wed May 03 2023 14:07:21 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:candidate validation failed: ugEducationDetail: Path `ugEducationDetail` is required., ugStream: Path `ugStream` is required., ugPassOutYear: Path `ugPassOutYear` is required., ugAggregate: Path `ugAggregate` is required. User:undefined
+error Time: Wed May 03 2023 14:09:09 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:feedback validation failed: createdBy: Path `createdBy` is required., detailedFeedback: Path `detailedFeedback` is required., roundType: `1st Round` is not a valid enum value for path `roundType`., status: `Select` is not a valid enum value for path `status`. User:undefined
+error Time: Thu May 04 2023 11:34:34 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 11:38:15 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 11:38:19 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 11:38:42 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 11:41:23 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 11:43:08 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 11:43:22 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 11:44:23 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:createdBy is not defined User:undefined
+error Time: Thu May 04 2023 11:50:19 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:ele is not defined User:undefined
+error Time: Thu May 04 2023 12:00:20 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu May 04 2023 12:01:48 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:candidate validation failed: candidateId: Path `candidateId` is required. User:undefined
+error Time: Thu May 04 2023 13:23:16 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:(intermediate value).toArray is not a function User:undefined
+error Time: Thu May 04 2023 13:24:29 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Candidate.find(...).toArray is not a function User:undefined
+error Time: Mon May 29 2023 12:33:09 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:Cannot read properties of undefined (reading 'toUpperCase') User:undefined
+error Time: Mon May 29 2023 12:36:09 GMT+0530 (India Standard Time) URL: localhost:4005/user//add/allCandidates Error:Unexpected field User:undefined
+error Time: Mon May 29 2023 12:36:17 GMT+0530 (India Standard Time) URL: localhost:4005/user//add/allCandidates Error:Unexpected field User:undefined
+error Time: Mon May 29 2023 12:36:26 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Unexpected field User:undefined
+error Time: Mon May 29 2023 12:37:23 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Unexpected field User:undefined
+error Time: Mon May 29 2023 12:37:29 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Unexpected field User:undefined
+error Time: Mon May 29 2023 12:37:35 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Unexpected field User:undefined
+error Time: Mon May 29 2023 12:37:36 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Unexpected field User:undefined
+error Time: Mon May 29 2023 12:37:45 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/allCandidates Error:Unexpected field User:undefined
+error Time: Thu Jun 15 2023 12:19:38 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/walkin Error:feedback validation failed: createdBy: Path `createdBy` is required., detailedFeedback: Path `detailedFeedback` is required., roundType: `1st Round` is not a valid enum value for path `roundType`., status: `Select` is not a valid enum value for path `status`. User:undefined
+error Time: Thu Jun 22 2023 16:39:57 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/candidate Error:Cannot read properties of undefined (reading 'email') User:undefined
+error Time: Thu Mar 20 2025 20:27:35 GMT+0530 (India Standard Time) URL: localhost:4005/enquiries/create/enquiry Error:Cannot access 'enquiry' before initialization User:undefined
