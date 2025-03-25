@@ -5,7 +5,7 @@ module.exports.config = {
       process.env.ENV === "DEV"
         // ? `mongodb://10.10.20.17:27017/ty_walk_ins`
         ?`mongodb://127.0.0.1:27017/restcoderacademy`
-        : `mongodb+srv://tewalkins:are0n3vtkvdchsur@walkins.cdsrjzu.mongodb.net/TechnoElevate?retryWrites=true&w=majority` ,
+        : `mongodb+srv://renquiry:trca%40786123@rcaenq.vjmy8.mongodb.net/?retryWrites=true&w=majority&appName=rcaenq` ,
        
     option: {
       user: "",
