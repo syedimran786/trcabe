@@ -284,3 +284,4 @@ http POST Time: Sat Mar 22 2025 19:15:04 GMT+0530 (India Standard Time) URL: loc
 http POST Time: Sat Mar 22 2025 19:16:06 GMT+0530 (India Standard Time) URL: localhost:4005 /enquiries/create/enquiry User:undefined
 http POST Time: Tue Mar 25 2025 19:30:46 GMT+0530 (India Standard Time) URL: localhost:4005 /enquiries/create/enquiry User:undefined
 http POST Time: Tue Mar 25 2025 19:34:28 GMT+0530 (India Standard Time) URL: localhost:4005 /enquiries/create/enquiry User:undefined
+http GET Time: Wed Mar 26 2025 18:16:12 GMT+0530 (India Standard Time) URL: localhost:4005 /enquiries/get/enquiries User:undefined

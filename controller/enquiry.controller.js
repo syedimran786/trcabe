@@ -94,6 +94,26 @@ const createEnquiry = async (req, res, next) => {
 };
 
 
+let getAllEnquiries=async(req,res,next)=>
+{
+    try
+    {
+        let enquiries=await Enquiry.find({});
+
+        if(enquiries)
+        {
+            return res.status(200).json({ error: true, message: "Enquiries Fetched Successfully",data:enquiries})
+        }
+        return res.status(200).json({ error: true, message: "Enquiries not found" })
+    }
+    catch(err)
+    {
+        next(err)
+    }
+}
+
+
 module.exports={
-    createEnquiry
+    createEnquiry,
+    getAllEnquiries
 }
