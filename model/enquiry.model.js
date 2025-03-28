@@ -23,7 +23,6 @@ const enquiry = new Schema(
     message:{
         type:String,
         required:true,
-        default:"Normal Enquiry"
     },
     re_enquiry: {
       type: String,

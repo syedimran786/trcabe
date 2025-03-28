@@ -17,7 +17,7 @@ const { enquiryMail } = require('../helper/mailHelper');
     messages({ "string.empty": "Mobile Number is Required", "string.max": "Only 10 Numbers Allowed", 
     "string.pattern.base": "Invalid Mobile Number"}).trim(),
   experience: Joi.string().required().messages({ "string.empty": "Years Of Experirnce is Required" }).trim(),
-  message: Joi.string().allow("").allow(null).trim(),
+  message: Joi.string().trim().required(),
 })
 const createEnquiry = async (req, res, next) => {
   try {
@@ -29,12 +29,14 @@ const createEnquiry = async (req, res, next) => {
       message,
     } = req.body;
 
+  
+    console.log({message})
     let { error, value } = schema.validate({
       fullname,
       email,
       mobile,
       experience,
-      message
+      message:message?message:"Normal Enquiry"
     });
     if (error) {
       // console.log(error)
@@ -43,13 +45,14 @@ const createEnquiry = async (req, res, next) => {
         .json({ error: true, message: error.message });
     }
    
-      
+      console.log(value)
 
       const enquiryCheck = await Enquiry.findOne({$or:[{email,mobile}]});
     
       if (enquiryCheck) {
        let enquiry=await Enquiry.findOneAndUpdate({$or:[{email,mobile}]},{$set:{re_enquiry:"Yes",message}},{new:true});
-       await enquiryMail({ fullname,
+       await enquiryMail({ 
+        fullname,
         email,
         mobile,
         experience,
@@ -66,6 +69,7 @@ const createEnquiry = async (req, res, next) => {
        
  
       const enquiry = await Enquiry.create({...value})
+
 
 
       if (enquiry) {
