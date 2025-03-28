@@ -67,7 +67,6 @@ const  candidateMail= async (email,fullName,rpmdata) => {
 
 
 const  enquiryMail= async ({email,fullname,experience,mobile,message,encType}) => {
-  console.log(email)
   const transporter = await transporterFunc();
   const mailConfigOption = {
     from: {

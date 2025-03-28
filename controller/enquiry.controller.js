@@ -39,13 +39,11 @@ const createEnquiry = async (req, res, next) => {
       message:message?message:"Normal Enquiry"
     });
     if (error) {
-      // console.log(error)
       return res
         .status(502)
         .json({ error: true, message: error.message });
     }
    
-      console.log(value)
 
       const enquiryCheck = await Enquiry.findOne({$or:[{email,mobile}]});
     
@@ -70,7 +68,7 @@ const createEnquiry = async (req, res, next) => {
  
       const enquiry = await Enquiry.create({...value})
 
-
+console.log(value.message)
 
       if (enquiry) {
         await enquiryMail( {
@@ -78,7 +76,7 @@ const createEnquiry = async (req, res, next) => {
             email,
             mobile,
             experience,
-            message,
+            message:value.message,
             encType:"No"
           });
        return res.status(201).json({
