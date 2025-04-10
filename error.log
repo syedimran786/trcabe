@@ -43,3 +43,11 @@ error Time: Thu Jun 15 2023 12:19:38 GMT+0530 (India Standard Time) URL: localho
 error Time: Thu Jun 22 2023 16:39:57 GMT+0530 (India Standard Time) URL: localhost:4005/user/add/candidate Error:Cannot read properties of undefined (reading 'email') User:undefined
 error Time: Thu Mar 20 2025 20:27:35 GMT+0530 (India Standard Time) URL: localhost:4005/enquiries/create/enquiry Error:Cannot access 'enquiry' before initialization User:undefined
 error Time: Fri Mar 28 2025 16:02:23 GMT+0530 (India Standard Time) URL: localhost:4005/enquiries/create/enquiry Error:Cannot access 'message' before initialization User:undefined
+error Time: Tue Apr 01 2025 19:43:59 GMT+0530 (India Standard Time) URL: localhost:4005/enquiries/create/batch Error:batch validation failed: date: Cast to date failed for value "20-20-2025" (type string) at path "date" User:undefined
+error Time: Tue Apr 08 2025 17:45:40 GMT+0530 (India Standard Time) URL: localhost:4005/reviews/add/review Error:undefined User:undefined
+error Time: Tue Apr 08 2025 17:46:59 GMT+0530 (India Standard Time) URL: localhost:4005/reviews/add/review Error:undefined User:undefined
+error Time: Tue Apr 08 2025 17:50:42 GMT+0530 (India Standard Time) URL: localhost:4005/reviews/add/review Error:undefined User:undefined
+error Time: Tue Apr 08 2025 17:52:42 GMT+0530 (India Standard Time) URL: localhost:4005/reviews/add/review Error:undefined User:undefined
+error Time: Tue Apr 08 2025 17:58:48 GMT+0530 (India Standard Time) URL: localhost:4005/reviews/add/review Error:review validation failed: photo: Path `photo` is required. User:undefined
+error Time: Tue Apr 08 2025 18:10:24 GMT+0530 (India Standard Time) URL: localhost:4005/reviews/add/review Error:review validation failed: photo: Path `photo` is required. User:undefined
+error Time: Tue Apr 08 2025 18:18:20 GMT+0530 (India Standard Time) URL: localhost:4005/reviews/add/review Error:count is not defined User:undefined

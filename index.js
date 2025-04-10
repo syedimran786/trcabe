@@ -3,7 +3,7 @@ const { errorlogger, reqlogger } = require("./adapters/logger");
 require("dotenv").config();
 const { config } = require("./config/index");
 const { db } = require("./helper/dbConnect");
-const { adminRoutes, authRoutes, userRoutes,enquiryRoutes } =
+const { adminRoutes, authRoutes, userRoutes,enquiryRoutes,batchRoutes,reviewRoutes } =
   require("./routes/index").routes();
 
 const app = express();
@@ -48,6 +48,10 @@ const expressServer = async () => {
   // app.use("/auth", authRoutes);
   // app.use("/user", userRoutes);
   app.use("/enquiries", enquiryRoutes);
+  app.use("/batches", batchRoutes);
+  app.use("/reviews", reviewRoutes);
+
+
 
 
   //express default error middleware
