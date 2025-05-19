@@ -1,6 +1,6 @@
 const { createReviews, getAllReviews} = require("../../controller/reviews.controller");
 const { uploadFile, deleteFile } = require("../../controller/upload.controller");
-const { upload, handleUploadErrors } = require('../../helper/multerHelper');
+const { uploadImage, handleUploadErrors } = require('../../helper/multerHelper');
 
 
 //! code from chat gpt to upload multiple,single file and to delete the file
@@ -12,7 +12,7 @@ const { upload, handleUploadErrors } = require('../../helper/multerHelper');
 //     uploadFile
 //   );
   
-//   // Multiple files upload
+  //! Multiple files upload
 //   router.post('/upload-multiple', 
 //     upload.array('files', 5), // Max 5 files
 //     handleUploadErrors,
@@ -25,6 +25,7 @@ const { upload, handleUploadErrors } = require('../../helper/multerHelper');
 
 
 module.exports.routesConfig = router => {
+    let {upload}=uploadImage("reviews")
     // Single file upload
     router.post("/add/review", upload.single('photo'), 
     handleUploadErrors,

@@ -1,4 +1,5 @@
-const { cloudinary } = require('../helper/cloudinaryHelper');
+const cloudinaryConfig = require('../helper/cloudinaryHelper');
+// let {cloudinary}=cloudinaryConfig()
 
 uploadFile = async (req, res, next) => {
   try {
@@ -32,22 +33,22 @@ uploadFile = async (req, res, next) => {
   }
 };
 
-deleteFile = async (req, res, next) => {
-  try {
-    const { public_id } = req.params;
-    const result = await cloudinary.uploader.destroy(public_id);
+// deleteFile = async (req, res, next) => {
+//   try {
+//     const { public_id } = req.params;
+//     const result = await cloudinary.uploader.destroy(public_id);
     
-    if (result.result !== 'ok') {
-      return res.status(404).json({ error: 'File not found' });
-    }
+//     if (result.result !== 'ok') {
+//       return res.status(404).json({ error: 'File not found' });
+//     }
     
-    res.json({ success: true, message: 'File deleted successfully' });
-  } catch (error) {
-    next(error);
-  }
-};
+//     res.json({ success: true, message: 'File deleted successfully' });
+//   } catch (error) {
+//     next(error);
+//   }
+// };
 
 module.exports={
     uploadFile,
-    deleteFile,
+    // deleteFile,
     }

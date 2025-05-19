@@ -1,7 +1,7 @@
 const {uploadImage,deleteImageFromLocal} = require('../helper/uploadHelper');
-const Review = require('../model/review.model');
+const Trainer = require('../model/trainer.model');
 
-let createReviews=async(req,res,next)=>
+let createTrainer=async(req,res,next)=>
 {
     try
     {
@@ -9,62 +9,57 @@ let createReviews=async(req,res,next)=>
             name,
             email,
             mobile,
-            stream,
-            rating,
-            feedback
+            designation,
         } = req.body;
 
    //! perform joi validations before this to avoid the error
-   if(!email || !mobile || !name || !stream || !rating || !feedback)
+   if(!email || !mobile || !name || !designation)
     {
-        console.log("empty")
+       
         deleteImageFromLocal(req);
-     return res.status(400).json({
-         error: true,
-         message: "All Fields are Mandatory",
+        return res.status(400).json({
+        error: true,
+        message: "All Fields are Mandatory",
        });
     }
    
     //! if file is uploaded only then the multer loads the file to the local folder
     if(!req.file)
      {
-        console.log("images")
  
       return res.status(400).json({
           error: true,
           message: "Image Is Mandatory",
         });
      }
-         let isReviewAvailable=await Review.findOne({$or:[{email},{mobile}]})
-         if(isReviewAvailable)
+         let isTrainerAvailable=await Trainer.findOne({$or:[{email},{mobile}]})
+         if(isTrainerAvailable)
          {
-            console.log("Exist")
             deleteImageFromLocal(req);
  
              return res.status(503).json({
                  error: true,
-                 message: "Review Already Added",
+                 message: "Trainer Already Added",
                });
          }
-        let {data}=await uploadImage(req,"reviews");
+         console.log("controller")
+        let {data}=await uploadImage(req,"trainers");
       
-        const review = await Review.create({
+        const trainer = await Trainer.create({
             photo:data.url,//! cloudinari url after adding
             name,
             email,
             mobile,
-            stream,
-            rating,
-            feedback
+            designation,
             })
+        console.log("controller 2")
         
-        
-              if (review) {
+              if (trainer) {
                
                return res.status(201).json({
                   error: false,
-                  message: "Review Added Successfully",
-                  data: review,
+                  message: "Trainer Added Successfully",
+                  data: trainer,
                 });
             }
                 res.status(502).json({ error: true, message: "Operation failed" });
@@ -77,17 +72,17 @@ let createReviews=async(req,res,next)=>
     }
 }
 
-let getAllReviews=async(req,res,next)=>
+let getAllTrainers=async(req,res,next)=>
 {
     try
     {
-        let reviews=await Review.find({});
+        let trainer=await Trainer.find({});
 
-        if(reviews)
+        if(trainer)
         {
-            return res.status(200).json({ error: true, message: "Reviews Fetched Successfully",data:reviews})
+            return res.status(200).json({ error: true, message: "Trainers Fetched Successfully",data:trainer})
         }
-        return res.status(404).json({ error: true, message: "Reviews not found" })
+        return res.status(404).json({ error: true, message: "Trainers not found" })
     }
     catch(err)
     {
@@ -96,6 +91,6 @@ let getAllReviews=async(req,res,next)=>
 }
 
 module.exports={
-    createReviews,
-    getAllReviews
+    createTrainer,
+    getAllTrainers
 }

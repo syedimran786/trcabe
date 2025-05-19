@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const review = new Schema(
+const trainer = new Schema(
   {
     photo: {
       type: String,
@@ -18,21 +18,14 @@ const review = new Schema(
         type: String,
         required:true,
       },
-      stream: {
+      designation: {
       type: String,
       required: true,
     },
-    rating: {
-      type: Number,
-      required:true,
-    },
-    feedback: {
-      type: String,
-      required:true,
-    },
+   
   },
   { timestamps: true }
 );
 
 
-module.exports = model("review", review);
+module.exports = model("trainer", trainer);

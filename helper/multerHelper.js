@@ -1,5 +1,11 @@
 const multer = require('multer');
-const { storage } = require('../helper/cloudinaryHelper');
+const cloudinaryConfig = require('../helper/cloudinaryHelper');
+
+
+//! need to recieve dynamic folder name that is why i created the function
+let uploadImage=(folderName)=>
+{
+  let {storage}=cloudinaryConfig(folderName);
 
 const upload = multer({
     storage,
@@ -20,6 +26,8 @@ const upload = multer({
       cb(null, true);
     }
   });
+  return {upload}
+}
   
   // Handle upload errors
   const handleUploadErrors = (err, req, res, next) => {
@@ -27,13 +35,15 @@ const upload = multer({
       if (err.code === 'LIMIT_FILE_SIZE') {
         return res.status(413).json({ error: 'File size too large' });
       }
-      if (err.code === 'LIMIT_FILE_COUNT') {
+    if (err.code === 'LIMIT_FILE_COUNT') {
         return res.status(400).json({ error: 'Too many files' });
       }
     } else if (err.code === 'INVALID_FILE_TYPE') {
       return res.status(400).json({ error: 'Invalid file type' });
     }
+   
+
     next(err);
   };
   
-  module.exports = { upload, handleUploadErrors };
+  module.exports = { uploadImage, handleUploadErrors };
